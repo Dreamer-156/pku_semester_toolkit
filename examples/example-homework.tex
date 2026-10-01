@@ -1,0 +1,72 @@
+% 可独立编译的示例。使用 Tectonic 或 XeLaTeX。
+\documentclass[11pt,a4paper]{ctexart}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+
+\newcommand{\studentname}{示例同学}
+\newcommand{\studentid}{2026000000}
+\newcommand{\coursename}{中级微观经济学}
+\newcommand{\assignmentnumber}{1}
+\newcommand{\assignmentdate}{2026-09-28}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+
+\newtheorem{problem}{题目}
+\renewcommand{\proofname}{证明}
+\newenvironment{solution}
+  {\par\noindent\textbf{解答：}\ }
+  {\par\medskip}
+
+\begin{document}
+\begin{center}
+  {\Large\bfseries \coursename}\par\medskip
+  作业 \assignmentnumber\par\medskip
+  姓名：\studentname\quad 学号：\studentid\par
+  日期：\assignmentdate
+\end{center}
+\hrule
+\bigskip
+
+\begin{problem}
+某消费者的效用函数为 $u(x,y)=x^{\alpha}y^{1-\alpha}$，其中
+$0<\alpha<1$。价格 $p_x,p_y$ 和收入 $m$ 均为正。
+求两种商品的需求量。
+\end{problem}
+
+\begin{solution}
+效用对两种商品都严格递增，因此预算约束取等号：
+$p_xx+p_yy=m$。内点最优时，一阶条件给出
+\[
+  \frac{\alpha}{1-\alpha}\frac{y}{x}=\frac{p_x}{p_y}.
+\]
+结合预算约束，可得
+\[
+  x^*=\frac{\alpha m}{p_x},
+  \qquad
+  y^*=\frac{(1-\alpha)m}{p_y}.
+\]
+\end{solution}
+
+\begin{problem}
+证明题目 1 得到的需求量恰好用完消费者的收入。
+\end{problem}
+
+\begin{solution}
+\begin{proof}
+将需求量代入总支出，可得
+\[
+  p_xx^*+p_yy^*
+  =p_x\frac{\alpha m}{p_x}
+   +p_y\frac{(1-\alpha)m}{p_y}
+  =\alpha m+(1-\alpha)m=m.
+\]
+因此预算恰好用完。
+\end{proof}
+\end{solution}
+
+\end{document}

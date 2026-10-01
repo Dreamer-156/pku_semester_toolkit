@@ -1,0 +1,52 @@
+% 每份作业复制一份此文件，修改下面五项信息；保存为 UTF-8。
+% 使用 Tectonic 或 XeLaTeX 编译，支持中文姓名与正文。
+\documentclass[11pt,a4paper]{ctexart}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+
+% 作业信息：修改这五行。
+\newcommand{\studentname}{你的姓名}
+\newcommand{\studentid}{你的学号}
+\newcommand{\coursename}{课程名称}
+\newcommand{\assignmentnumber}{1}
+\newcommand{\assignmentdate}{\today}
+
+% 常用数学宏：在数学模式中使用。
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+
+% 题号自动递增：题目 1、题目 2、……
+\newtheorem{problem}{题目}
+\renewcommand{\proofname}{证明}
+\newenvironment{solution}
+  {\par\noindent\textbf{解答：}\ }
+  {\par\medskip}
+% proof 环境和证明结束符号由 amsthm 提供。
+
+\begin{document}
+\begin{center}
+  {\Large\bfseries \coursename}\par\medskip
+  作业 \assignmentnumber\par\medskip
+  姓名：\studentname\quad 学号：\studentid\par
+  日期：\assignmentdate
+\end{center}
+\hrule
+\bigskip
+
+\begin{problem}
+将这句话替换为第一道题的题目。
+\end{problem}
+
+\begin{solution}
+在这里写解答，例如 $x \in \R$、$\E[X]$。
+\begin{proof}
+需要证明时，在这里写证明。
+\end{proof}
+\end{solution}
+
+% 添加更多题目时，复制上面的 problem 和 solution 块。
+\end{document}
